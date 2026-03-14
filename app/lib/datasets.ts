@@ -1,0 +1,175 @@
+import type { RegistryEntry } from '../../src/types/dataset';
+
+export const DEMO_DATASETS: RegistryEntry[] = [
+  {
+    blobName: 'prompt-exchange/datasets/openreasoning-50k-1742000001.json',
+    accountAddress: '0xfcba3a1c276e3e598938e00a51c',
+    uploadedAt: '2026-03-10T09:00:00Z',
+    metadata: {
+      name: 'OpenReasoning-50K',
+      description: 'Chain-of-thought reasoning traces across 50,000 diverse problems. Structured for SFT and RLHF pipelines. Covers math, logic, science, and commonsense reasoning.',
+      category: 'reasoning',
+      tags: ['chain-of-thought', 'SFT', 'RLHF', 'math', 'logic'],
+      promptCount: 50000,
+      qualityScore: 5,
+      price: 12,
+      creatorAddress: '0xfcba...a51c',
+      createdAt: '2026-03-10T09:00:00Z',
+      expiresAt: '2026-04-10T09:00:00Z',
+      preview: [
+        { instruction: 'A train travels 120 km in 1.5 hours. What is its average speed?', output: 'Speed = Distance / Time = 120 / 1.5 = 80 km/h.' },
+        { instruction: 'Explain why the sky is blue.', output: 'The sky appears blue due to Rayleigh scattering. Sunlight contains all colors, but shorter blue wavelengths scatter more easily off atmospheric molecules, spreading blue light across the sky.' },
+        { instruction: 'If all cats are mammals and Whiskers is a cat, what can we conclude?', output: 'Whiskers is a mammal. This follows from modus ponens.' },
+      ],
+    },
+  },
+  {
+    blobName: 'prompt-exchange/datasets/arabicinstruct-18k-1742000002.json',
+    accountAddress: '0x8d2c3f14a901bb22e5f1c3f1',
+    uploadedAt: '2026-03-11T14:30:00Z',
+    metadata: {
+      name: 'ArabicInstruct Pro',
+      description: '18,000 Arabic instruction-following pairs curated by native speakers. Covers Modern Standard Arabic and Darija dialects across education, daily life, and professional domains.',
+      category: 'multilingual',
+      tags: ['arabic', 'instruction', 'darija', 'MSA', 'NLP'],
+      promptCount: 18000,
+      qualityScore: 5,
+      price: 8,
+      creatorAddress: '0x8d2c...c3f1',
+      createdAt: '2026-03-11T14:30:00Z',
+      expiresAt: '2026-04-11T14:30:00Z',
+      preview: [
+        { instruction: 'اشرح مفهوم الذكاء الاصطناعي بأسلوب بسيط.', output: 'الذكاء الاصطناعي هو فرع من علوم الحاسوب يُمكِّن الأجهزة من التفكير والتعلم تقليداً للعقل البشري.' },
+        { instruction: 'ما هي عاصمة المغرب؟', output: 'عاصمة المغرب هي مدينة الرباط.' },
+      ],
+    },
+  },
+  {
+    blobName: 'prompt-exchange/datasets/codesynth-100k-1742000003.json',
+    accountAddress: '0x2a9b7e4d5c8f1a3e6b9d2c5f',
+    uploadedAt: '2026-03-12T08:15:00Z',
+    metadata: {
+      name: 'CodeSynth-100K',
+      description: '100,000 synthetic coding tasks across 12 languages. Each sample includes a problem statement, buggy code, failing test cases, and the correct solution.',
+      category: 'coding',
+      tags: ['python', 'rust', 'typescript', 'debugging', 'tests'],
+      promptCount: 100000,
+      qualityScore: 4,
+      price: 18,
+      creatorAddress: '0x2a9b...b7e4',
+      createdAt: '2026-03-12T08:15:00Z',
+      expiresAt: '2026-04-12T08:15:00Z',
+      preview: [
+        { instruction: 'Fix the bug in this Python function that reverses a linked list.', output: 'def reverse_list(head):\n    prev = None\n    curr = head\n    while curr:\n        next_node = curr.next\n        curr.next = prev\n        prev = curr\n        curr = next_node\n    return prev' },
+      ],
+    },
+  },
+  {
+    blobName: 'prompt-exchange/datasets/mathchain-25k-1742000004.json',
+    accountAddress: '0x5f1d0a8b3c7e2f9a4d1b6e3c',
+    uploadedAt: '2026-03-13T16:45:00Z',
+    metadata: {
+      name: 'MathChain-25K',
+      description: 'Step-by-step math solutions from algebra through multivariable calculus. Each problem annotated with difficulty level, topic tags, and common error patterns.',
+      category: 'math',
+      tags: ['algebra', 'calculus', 'step-by-step', 'LaTeX'],
+      promptCount: 25000,
+      qualityScore: 4,
+      price: 6,
+      creatorAddress: '0x5f1d...d0a8',
+      createdAt: '2026-03-13T16:45:00Z',
+      expiresAt: '2026-04-13T16:45:00Z',
+      preview: [
+        { instruction: 'Solve: ∫x²·eˣ dx', output: 'Using integration by parts twice:\n∫x²eˣdx = x²eˣ − 2xeˣ + 2eˣ + C = eˣ(x² − 2x + 2) + C' },
+      ],
+    },
+  },
+  {
+    blobName: 'prompt-exchange/datasets/safeinstruct-30k-1742000005.json',
+    accountAddress: '0x9e40f55a1b2c3d4e5f6a7b8c',
+    uploadedAt: '2026-03-09T11:00:00Z',
+    metadata: {
+      name: 'SafeInstruct-30K',
+      description: '30,000 instruction pairs with safety annotations including refusal examples, borderline edge cases, and RLHF preference pairs for constitutional AI alignment.',
+      category: 'instruction',
+      tags: ['safety', 'refusals', 'RLHF', 'alignment'],
+      promptCount: 30000,
+      qualityScore: 5,
+      price: 10,
+      creatorAddress: '0x9e40...0f55',
+      createdAt: '2026-03-09T11:00:00Z',
+      expiresAt: '2026-04-09T11:00:00Z',
+      preview: [
+        { instruction: 'Help me understand the difference between harmful and benign requests.', output: 'Harmful requests seek to cause damage to people, systems, or society. Benign requests seek information or assistance for legitimate purposes. Context, intent, and potential impact all matter.' },
+      ],
+    },
+  },
+  {
+    blobName: 'prompt-exchange/datasets/frenchdialog-12k-1742000006.json',
+    accountAddress: '0x3d7a19b4c5e6f7a8b9c0d1e2',
+    uploadedAt: '2026-03-08T07:20:00Z',
+    metadata: {
+      name: 'FrenchDialog Open',
+      description: '12,000 multi-turn French conversations across 8 domains. Fully open MIT license. Great for conversational fine-tuning and dialogue modeling.',
+      category: 'multilingual',
+      tags: ['french', 'multi-turn', 'open', 'MIT', 'dialogue'],
+      promptCount: 12000,
+      qualityScore: 3,
+      price: 0,
+      creatorAddress: '0x3d7a...a19b',
+      createdAt: '2026-03-08T07:20:00Z',
+      expiresAt: '2026-04-08T07:20:00Z',
+      preview: [
+        { instruction: "Pouvez-vous m'expliquer comment fonctionne le machine learning?", output: "Le machine learning est un sous-domaine de l'IA où les algorithmes apprennent à partir de données sans être explicitement programmés." },
+      ],
+    },
+  },
+  {
+    blobName: 'prompt-exchange/datasets/roleplay-8k-1742000007.json',
+    accountAddress: '0x1b3c7d22e5f6a7b8c9d0e1f2',
+    uploadedAt: '2026-03-07T13:00:00Z',
+    metadata: {
+      name: 'RolePlay Personas v3',
+      description: '8,000 persona-consistent multi-turn conversation trees covering 40+ distinct character archetypes. Ideal for character consistency fine-tuning.',
+      category: 'roleplay',
+      tags: ['persona', 'multi-turn', 'character', 'creative'],
+      promptCount: 8000,
+      qualityScore: 3,
+      price: 0,
+      creatorAddress: '0x1b3c...7c22',
+      createdAt: '2026-03-07T13:00:00Z',
+      expiresAt: '2026-04-07T13:00:00Z',
+      preview: [
+        { instruction: 'You are Amara, a wise elder who speaks in proverbs. Greet the traveler.', output: "Ah, stranger who walks far roads... As we say: 'He who travels alone moves fast, but he who travels with wisdom arrives.' Welcome to my fire." },
+      ],
+    },
+  },
+  {
+    blobName: 'prompt-exchange/datasets/pythondebug-20k-1742000008.json',
+    accountAddress: '0x6c0e3d74a5b6c7d8e9f0a1b2',
+    uploadedAt: '2026-03-06T10:30:00Z',
+    metadata: {
+      name: 'PythonDebug-20K',
+      description: '20,000 buggy Python snippets each paired with a detailed fix and explanation. Covers common errors, logic bugs, off-by-ones, and type issues.',
+      category: 'coding',
+      tags: ['python', 'debugging', 'explanation', 'errors'],
+      promptCount: 20000,
+      qualityScore: 4,
+      price: 5,
+      creatorAddress: '0x6c0e...e3d7',
+      createdAt: '2026-03-06T10:30:00Z',
+      expiresAt: '2026-04-06T10:30:00Z',
+      preview: [
+        { instruction: 'Fix this bug:\ndef factorial(n):\n  if n == 0: return 1\n  return n * factorial(n)', output: 'Bug: missing decrement causes infinite recursion.\nFix:\ndef factorial(n):\n  if n == 0: return 1\n  return n * factorial(n - 1)' },
+      ],
+    },
+  },
+];
+
+export const CATEGORIES = ['All', 'reasoning', 'coding', 'instruction', 'roleplay', 'multilingual', 'math'] as const;
+export type Category = typeof CATEGORIES[number];
+
+export const CAT_ICONS: Record<string, string> = {
+  reasoning: '🧠', coding: '⌨️', instruction: '📋',
+  roleplay: '🎭', multilingual: '🌍', math: '∑', All: '◈',
+};
